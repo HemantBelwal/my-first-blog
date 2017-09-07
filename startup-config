@@ -1,0 +1,726 @@
+! 5160 Configuration File
+! Chassis MAC:   9c:7a:03:c2:4c:20
+! Host Name:     te5160-3281
+! Created:       Thu Aug 31 10:01:11 2017
+! Created by:    CLI
+! On terminal:   
+! SW Package:    Slot 1 - saos-06-17-30-0064
+! Build Number:  14812
+! MIB Number:    04-17-30-0020
+! Defaults:      Suppressed
+! Encoding:      US-ASCII
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SECLOG CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ALARM MANAGER
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RESOURCE CONFIG
+!
+resource-manager pool set feature access-list resource classifier count 512
+resource-manager pool set feature access-list resource counter count 512
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ACL PROFILE CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ACL RULE CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! CHASSIS SYSTEM RESERVED PORT CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NETWORK CONFIG:  vlans
+!
+vlan create vlan 234,1901-1923
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! CONGESTION AVOIDANCE PROFILE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RCOS QUEUE MAP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! FCOS->RCOS MAP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RCOS->FCOS MAP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VPLS IRB CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! COMMAND LOG MANAGER
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ROUTING DOMAIN
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! EVENT LOG MANAGER:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! CHASSIS CONFIG:
+!
+chassis set oam-services-port-role oam-services
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SYSTEM CONFIG:
+!
+system set host-name te5160-3281
+system set time-offset -25200
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! INTERFACE CONFIG:
+!
+interface remote set vlan 234
+interface remote set ip 10.121.234.87/24 
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! INTERFACE LOCAL CONFIG:
+!
+interface local set ip 10.121.233.228/24 
+interface set gateway 10.121.234.1 
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! IP INTERFACE CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DNS CLIENT CONFIG:
+!
+dns-client set domain-name stalab.ciena.com
+dns-client add server 10.4.0.30
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NTP CONFIG:
+!
+ntp authentication enable
+ntp authentication secret key-id 6 md5 #A#U2lyIvKTUe982WqSjbInl774S61u7CjbDX5ygU9Jm4fPl3HFZJhGhsdMqFn5AWzZbH2mdfca6RJ3Ebud9bJUalVv7pm3CDTZizOvrgIkw4set3L/iVQqK7T9EDGvTzbbcWZcNsN7Lp2Bdr/s6AbE7HDdK6NgUuYs2Fv6tQau3jhkazdSmdiAxPryUWglH3TGZ+Op1wYykCOqgOWoGPAwFWcn+Yv2vflFxyRK6Oo5UbjY8RLa3bEqKloLM+ycUhAn
+ntp client add server 10.121.230.21
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SYSLOG CONFIG:
+!
+syslog create collector 10.121.230.21 severity emergency,alert,error,warning,notice,info,debug
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TWAMP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TDM MODE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BFD GLOBAL
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BFD PROFILES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BFD SESSIONS
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! AIS GLOBAL
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! AIS PROFILES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-CIRCUIT TDM PROFILE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PORT CONFIG: ports
+!
+port disable port 1
+port set port 2 speed gigabit
+port disable port 3
+port set port 4 speed gigabit
+port disable port 5
+port disable port 6
+port disable port 7
+port disable port 8
+port disable port 9
+port disable port 10
+port disable port 11
+port disable port 12
+port disable port 13
+port disable port 14
+port disable port 15
+port disable port 16
+port disable port 17
+port disable port 19
+port disable port 22
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NETWORK CONFIG:  vlan members and attributes
+!
+vlan add vlan 1901 port 1
+vlan remove vlan 127 port 1
+vlan add vlan 1902 port 2
+vlan remove vlan 127 port 2
+vlan add vlan 1903 port 3
+vlan remove vlan 127 port 3
+vlan add vlan 1904 port 4
+vlan remove vlan 127 port 4
+vlan add vlan 1905 port 5
+vlan remove vlan 127 port 5
+vlan add vlan 1906 port 6
+vlan remove vlan 127 port 6
+vlan add vlan 1907 port 7
+vlan remove vlan 127 port 7
+vlan add vlan 1908 port 8
+vlan remove vlan 127 port 8
+vlan add vlan 1909 port 9
+vlan remove vlan 127 port 9
+vlan add vlan 1910 port 10
+vlan remove vlan 127 port 10
+vlan add vlan 1911 port 11
+vlan remove vlan 127 port 11
+vlan add vlan 1912 port 12
+vlan remove vlan 127 port 12
+vlan add vlan 1913 port 13
+vlan remove vlan 127 port 13
+vlan add vlan 1914 port 14
+vlan remove vlan 127 port 14
+vlan add vlan 1915 port 15
+vlan remove vlan 127 port 15
+vlan add vlan 1916 port 16
+vlan remove vlan 127 port 16
+vlan add vlan 1917 port 17
+vlan remove vlan 127 port 17
+vlan add vlan 234,1918 port 18
+vlan remove vlan 127 port 18
+vlan add vlan 1919 port 19
+vlan remove vlan 127 port 19
+vlan add vlan 1920 port 21
+vlan remove vlan 127 port 21
+vlan add vlan 1921 port 22
+vlan remove vlan 127 port 22
+vlan add vlan 1922 port 23
+vlan remove vlan 127 port 23
+vlan add vlan 1923 port 24
+vlan remove vlan 127 port 24
+!
+vlan rename vlan 1901 name park_1
+vlan rename vlan 1902 name park_2
+vlan rename vlan 1903 name park_3
+vlan rename vlan 1904 name park_4
+vlan rename vlan 1905 name park_5
+vlan rename vlan 1906 name park_6
+vlan rename vlan 1907 name park_7
+vlan rename vlan 1908 name park_8
+vlan rename vlan 1909 name park_9
+vlan rename vlan 1910 name park_10
+vlan rename vlan 1911 name park_11
+vlan rename vlan 1912 name park_12
+vlan rename vlan 1913 name park_13
+vlan rename vlan 1914 name park_14
+vlan rename vlan 1915 name park_15
+vlan rename vlan 1916 name park_16
+vlan rename vlan 1917 name park_17
+vlan rename vlan 1918 name park_18
+vlan rename vlan 1919 name park_19
+vlan rename vlan 1920 name park_21
+vlan rename vlan 1921 name park_22
+vlan rename vlan 1922 name park_23
+vlan rename vlan 1923 name park_24
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NETWORK CONFIG:  vlan cross-connect
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NETWORK CONFIG:  vlan translation
+!
+port set port 2 acceptable-frame-type all
+port set port 4 acceptable-frame-type all
+port set port 21 acceptable-frame-type all
+port set port 23 acceptable-frame-type all
+port set port 24 acceptable-frame-type all
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! QUEUE GROUP PROFILE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DYNAMIC QUEUE GROUP PROFILE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! QUEUE GROUP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! QUEUE GROUP PORT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PORT STATE GROUP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SERVICE QUEUING CONFIG:  
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SUB-PORT CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VC TRANSFORM PROFILE CONFIG: l2-transform
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TUNNEL CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-CIRCUIT CONFIG:  virtual circuits
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SUB-PORT VIRTUAL SWITCH ATTACHMENT CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! EGRESS PORT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! EGRESS PORT QUEUE GROUP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MISC QOS CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! FRAME INTEGRITY CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! AGING and LEARNING CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SERVICE ACCESS CONTROL CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! STATIC MAC CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BCAST FILTER CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MAC MOTION CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PFG CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PORT-BASED PFG CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! IRB INTERFACE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS GLOBAL FEATURE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS-TE/GMPLS-TP LABEL RANGE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS TE Attributes
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS TE Interface Attributes
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSVP-TE/GMPLS-RSVP-TE ENTITY
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSVP-TE/GMPLS-RSVP-TE INTERFACE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSVP NEIGHBOR-AUTHENTICATION
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS/GMPLS RSVP-TE INTERFACES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSVP PATH
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS-TE/GMPLS-TP TUNNEL QOS/BANDWIDTH PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS-TE TUNNEL FAST-REROUTE PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS/GMPLS TUNNEL-COS-PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS-TE/GMPLS-TP INGRESS/EGRESS TUNNELS
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS STATIC TRANSIT TUNNEL
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MPLS-TE AND GMPLS-TP BI-DIRECTIONAL ASSOCIATED TUNNEL
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSVP-TE/GMPLS-RSVP-TE GLOBAL
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! LDP GLOBAL SESSION CONFIGURATION
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN PSEUDOWIRE-COS-PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN PSEUDOWIRE-QOS-PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN PSEUDOWIRE-VCCV-PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN PSEUDOWIRE-BFD-PROFILE
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN GLOBAL PSEUDOWIRE CONFIGURATION
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN STATIC and DYNAMIC PSEUDOWIREs
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2-VPN STATIC and DYNAMIC PROTECTION PSEUDOWIREs
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RM
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! OSPF INSTANCES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ISIS INSTANCES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ISIS INTERFACES
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! INTER-CHASSIS LINK CREATE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! STATIC ARP
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! CPU IF CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! LACP CONFIG:
+!
+aggregation disable
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH MPLS AC CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH MPLS-VC ATTACHMENT:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! L2 CFT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TRAFFIC PROFILING CONFIG:
+!
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! LLDP CONFIG:
+!
+lldp disable
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! OAM CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RSTP CONFIG:
+!
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MSTP CONFIG:
+!
+!
+mstp disable
+mstp disable port 18
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RING PROTECTION CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DYING GASP CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! BENCHMARK CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH MEMBER STATISTICS CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! MULTICAST SERVICES CONFIG:      
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TDM PORT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TDM ATTACHMENT-CIRCUIT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TDM VIRTUAL CIRCUIT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH CROSS-CONNECT CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TDM PORT CLOCK MODE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SYNC CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL-SWITCH TDM MPLS AC CONFIG:
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DEFAULT VLAN MEMBERSHIP REMOVAL CONFIG:
+!
+vlan remove vlan 1 port 1
+vlan remove vlan 1 port 2
+vlan remove vlan 1 port 3
+vlan remove vlan 1 port 4
+vlan remove vlan 1 port 5
+vlan remove vlan 1 port 6
+vlan remove vlan 1 port 7
+vlan remove vlan 1 port 8
+vlan remove vlan 1 port 9
+vlan remove vlan 1 port 10
+vlan remove vlan 1 port 11
+vlan remove vlan 1 port 12
+vlan remove vlan 1 port 13
+vlan remove vlan 1 port 14
+vlan remove vlan 1 port 15
+vlan remove vlan 1 port 16
+vlan remove vlan 1 port 17
+vlan remove vlan 1 port 18
+vlan remove vlan 1 port 19
+vlan remove vlan 1 port 21
+vlan remove vlan 1 port 22
+vlan remove vlan 1 port 23
+vlan remove vlan 1 port 24
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! INTER-CHASSIS LINK SET CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SHELL CONFIG:
+!
+system shell set global-more off
+system shell set global-inactivity-timer off
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TELNET CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RADIUS CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TACACS CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SECURITY CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! XFTP
+!
+system server sftp enable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RING PROTECTION CFM SERVICE CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PERFORMANCE MONITOR TCA
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PERFORMANCE MONITOR
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! PERFORMANCE MONITOR BULKSTATS
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SSH CONFIG:
+!
+ssh server enable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIRTUAL LINK LOSS INDICATION CONFIG:
+!
+virtual-link-loss-indication enable
+virtual-link-loss-indication create action-group ag1
+virtual-link-loss-indication create instance-group ig1 direction unidirectional trigger any
+virtual-link-loss-indication disable instance-group ig1
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DOT1X CONFIG:
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SNMP
+!
+snmp set contact concentrator/mpls/DCRT/mplsDCRTCosProDut
+snmp set location Base_Automation_Config
+snmp create user gss auth-protocol sha auth-secret 084c694ce7a6b7460612b1aab1180be1e83e52d9 priv-protocol 3des priv-secret a33c84c0327f53a0d1d2130b9204a11c9571da99d6fb45510531adfba6b17bb7
+snmp security-to-group attach user gss sec-model v3 group staGrpV3
+snmp create access-entry staGrpV3 sec-model v3 sec-level authWithPriv read-view V12cView write-view V12cView notify-view V12cView
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! RMON
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! NETCONF CONFIG:
+!
+netconf add user gss
+netconf enable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DHCP CLIENT
+!
+dhcp client disable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DHCP RELAY AGENT
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DHCPV6 LDRA
+!
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DHCPV6 CLIENT
+!
