@@ -30,7 +30,7 @@ def netconf():
     child.expect('gss@.*')
     a = child.before
     for valueTest in a.splitlines():
-        matchobj1 = re.match(r'(\s+)vlli(.*)', valueTest, flags=0)
+        matchobj1 = re.match(r'(\s+)vlli(.*)\}', valueTest, flags=0)
         if matchobj1:
            print matchobj1.group()
 for value in f:
